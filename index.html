@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template </title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=cdnjs.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--form -->
+    <div class="form-container">
+        <h1>Sign up today!</h1>
+        <form id="signup-form" class="signup-form">
+            <!-- first Name -->
+            <div class="form-group">
+                <label for="first-name" class="first-name">First name</label>
+                <input type="text" id="first-name" class="first-name" placeholder="John" required min="1" max="100" name="fname">
+            </div>
+            <!-- last Name -->
+            <div class="form-group">
+                <label for="last-name" class="last-name">Last name</label>
+                <input type="text" id="last-name" class="last-name" placeholder="Doe" required min="1" max="100" name="lname">
+            </div>
+            <!-- Phone number -->
+            <div class="form-group">
+                <label for="number" class="phone-number">Phone number</label>
+                <input type="tel" id="number" class="Phone number" placeholder="555-555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="number">
+            </div>
+            <!-- email -->
+            <div class="form-group">
+                <label for="email" class="email">Email</label>
+                <input type="email" class="email" placeholder="john.doe@email.com" required name="email">
+            </div>
+            <!-- Website -->
+            <div class="form-group">
+                <label for="website" class="website">Website</label>
+                <input type="url" class="website" placeholder="https://johndoe.com" required name="website">
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password1" class="password">Create password</label>
+                <input type="password" min="8" id="password1" class="password" placeholder="Password (Min 8 characters)" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 uppercase character, 1 lowercase character and 1 number.">
+            </div>
+            <!-- Password Validation -->
+            <div class="form-group">
+                <label for="password2" class="password">Confirm password</label>
+                <input type="password" min="8" id="password2" class="password" placeholder="Password (Min 8 characters)" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
+            </div>
+            <button id="register-button" type="submit">Register</button>
+        </form>
+        <!-- Error / success message -->
+        <div id="message-container" class="message-container">
+            <h3 id="message">Don't Hesitate</h3>
+        </div>
+    </div>
+    <!-- Script  -->
+    <script src="script.js"></script>
+</body>
+</html>
